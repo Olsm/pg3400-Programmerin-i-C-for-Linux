@@ -1,0 +1,92 @@
+Good job guys!
+
+Now you have learnt how to get files over the internet with URL.
+
+Practical Session : 
+
+Goals: 
+- Get familiar with linux operating system
+- Get comfortable with using terminal 
+- Get to use several different terminal commands
+
+Tasks:
+
+- Play with tab:
+	- Start typing command like 's' and press tab, then type 'u' and tab,
+	  then type 'd' and tab
+	- Use it to see the possible files
+	- go into /etc directory
+	- type 'cd' and space and then press tab
+- Copy and paste text using mouse in the terminal
+	- Use ctrl+shift+c to copy and ctrl+shift+v to paste
+	- Use highlighting to copy and middle click to paste
+
+- Mess around with files 
+	- Look at the structure in /
+	- look at the binaries in /bin
+	- Try to locate binaries for all the commands we learnt today in the
+	  lecture
+	- Make a note of the ones you didnt find
+- man pages
+        - man man
+        - read about more commands
+        - try to play with the options with safe commands like cd, ls, grep
+
+-Copy the file you downloaded to /var
+        - try copying with sudo
+            cp linux.txt /var/linux.txt
+            Uten sudo feiler den fordi man har ikke permission
+            Med sudo blir man bedt om passord og det går bra
+
+-create a folder in your home directory
+   mkdir ~/folder
+- go into the folder
+   cd ~/folder
+- create two text files with your favorite lines in that folder
+   nano text1.txt (legg til innhold og lagre)
+   samme med text2.txt
+- concatenate the two files and print the output to the terminal
+    cat text1.txt text2.txt
+- concatenate and print the output to a third file
+    cat text1.txt text2.txt > text3.txt
+- write a small script that takes in two files, concatenates it and puts the
+  content into third file and also prints the third file to terminal
+    nano myscript
+      cat text1.txt text2.txt > text3.txt
+      cat text3.txt
+    chmod 755 myscript (gi read, write og execute permission)
+    ./myscript
+- Download a text file from internet - a book in text format
+    wget https://s3-us-west-2.amazonaws.com/pressbooks-samplefiles/MetamorphosisJ$
+- dump the contents of the book in terminal
+    cat Metamorphosis-jackson.pdf
+- open it with less
+    less Metamorphosis-jackson.pdf
+- copy the downloaded book into the directory you created.
+    cp Metamorphosis-jackson.pdf ~/folder/Metamorphosis-jackson.pdf
+- search for some word - both case sensitive and insensitive - in the file
+    grep "Title" Metamorphisis-jackson.pdf
+    grep -i "metamor" Metamorphosis-jackson.pdf
+- save all the lines with that word into another file
+    grep -a "Title" Metamorphosis-jackson.pdf > matches.txt
+      Jeg bruker -a for at grep skal behandle filen som en text fil
+- go to /etc and read the contents of the file 'sudoers'
+    sudo cat /etc/sudoers
+- check for the permissions of that file
+    filen må åpnes med sudo
+    filen må redigeres med visudo som root
+    det anbefales å legge til ting i /etc/sudoers.d/ istedenfor å redigere denne
+- try reading it using sudo
+    lese det med sudo cat går fint
+- make a symbolic link to your created directory in /tmp
+    ln -s folder /tmp/folder
+- cd to your symbolic link
+    error: Too many levels of symbolic links
+- use pwd to know what your current directory is
+    /tmp
+- try rebooting and finding your symbolic link
+    The symbolic link is gone 
+    Files in tmp are saved temporary until restart
+    Cleaning of tmp is done by an upstart script
+    A script that runs every time tmp is mounted
+    That means at every reboot
