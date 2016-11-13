@@ -61,5 +61,4 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-*.xml
-*.iml
+.idea/
