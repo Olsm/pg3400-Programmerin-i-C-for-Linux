@@ -29,14 +29,14 @@ int calculateFibonacci(int n) {
 
 int main(int argc, char *argv[]) {
     unsigned long timeStart, timeEnd;
-    int n;
+    int n = 0;
 
     if (argc > 0) {
         n = atoi(&argv[1][0]);
-        if (n == 0) {
-            puts("Please provide a non-zero integer as argument!");
-            return -1;
-        }
+    }
+    if (n == 0) {
+        puts("Please provide a non-zero integer as argument!");
+        return -1;
     }
 
     timeStart = GetTime();
