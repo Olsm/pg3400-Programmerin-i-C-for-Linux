@@ -1,0 +1,49 @@
+Today's exercises are going to be more experimental than strict tasks. But be
+careful not to install any libraries into your default directories. You might
+end up screwing things badly!
+
+Exercise 1:
+
+Write a function, that can print how many times it has been called so far
+without using a global variable
+
+Exercise 2:
+Take your bubble sort and binary search modules, make them into functions. Then
+provide interfaces to them using header files. Compile them as static libraries
+and shared libraries. Try to rewrite your main program so that you simply
+include the header and use the functions but not the source of the
+implementaton. Instead you should link with the libraries. Try linking with
+static and shared libraries.
+
+
+Exercise 3:
+
+Consider the following header : myalloc.h
+===================================================================================
+/* Multi-type memory allocation and initialization function.
+	void *myalloc(const char *, ...);
+
+	first argument accepts a string that has type and initialization flag.
+	accepted types:
+		char
+		int
+		float
+	accepted flags:
+		T or F
+
+	second argument is the number of elements that need to be allocated.
+	<if initialization flag is true>third argument - initialization value.
+
+	returns a void * pointer.
+
+	Example  Usage:
+		int *p;
+		p = (int *)myalloc("int T",100,4);
+		//Gives you an array with 100 ints and all are 4
+
+		float *p;
+		p = (float *)myalloc("float F",200);
+		//Gives you a float array with 200 floats unintialized
+
+======================================================================================
+Now assume you are an open source contributor and you are assigned to implement this. How would you do this?
