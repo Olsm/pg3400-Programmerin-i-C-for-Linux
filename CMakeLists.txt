@@ -19,3 +19,8 @@ add_executable(uke3.7 uke3/7.c)
 add_executable(uke4.1 uke4/1.c)
 add_executable(uke4.2 uke4/2.c)
 add_executable(uke4.3 uke4/3.c)
+
+add_executable(uke5.1 uke5/1.c)
+add_executable(uke5.2 uke5/2.c)
+add_executable(uke5.3 uke5/3.c)
+add_executable(uke5.4 uke5/4.c)
