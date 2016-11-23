@@ -68,4 +68,4 @@ which takes in a function that has one floating point argument and return a floa
 
 PS: This looks complicated than it actually is, I bet you can write this code in 25 min!
 
-Once you have the function. Find the integral of f(x) = x, f(x) = x*x 
+Once you have the function. Find the integral of f(x) = x, f(x) = x*x
