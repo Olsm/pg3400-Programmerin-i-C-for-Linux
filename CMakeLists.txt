@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 project(pg3400_Programmerin_i_C_for_Linux)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
 
 add_executable(uke2.1 uke2/code/1.c)
 add_executable(uke2.2 uke2/code/2.c)
