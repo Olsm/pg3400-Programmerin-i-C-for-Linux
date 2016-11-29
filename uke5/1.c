@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 int r = 3, c = 5;
 
@@ -11,6 +12,8 @@ void sortRow(int (*p)[c]);
 static int compare_int(void const *v1, void const *v2);
 
 int main(int argc, char *argv[]) {
+    srand (time(NULL));
+
     int elements[r][c];
     memset(elements, 0, sizeof elements);
     int maxElements = r * c;
